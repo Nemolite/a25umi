@@ -1,0 +1,12 @@
+<?php
+/**
+ * Точка входа в шаблон тестового сайта (a25/umi).
+ *
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+
+$this->initializeCommonVariables($variables);
+?>
+<?= $this->render($variables, 'layout/index') ?>

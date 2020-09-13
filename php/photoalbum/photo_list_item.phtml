@@ -1,0 +1,18 @@
+<?php
+/**
+ * Фотография в списке
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$pageId = $this->escape($variables['id']);
+$name = isset($variables['name']) ? $this->escape($variables['name']) : '';
+$imagePath = $this->escape($this->getPageImagePath($pageId, 'photo'));
+?>
+
+
+
+                     <img umi:element-id="<?= $pageId ?>" umi:field-name="photo"
+				 alt="<?= $this->escape($this->getPageImageAlt($pageId, 'photo')) ?>"
+				 title="<?= $this->escape($this->getPageImageTitle($pageId, 'photo')) ?>"
+				 src="<?= $imagePath ?>">
